@@ -4,9 +4,187 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>perfil de usuario </title>
+    <title>perfil de usuário </title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    <h1>Perfil de usuário</h1>
+    <header>
+        <img src="/imagens/img01.jpg" alt="TEcnologias">
+
+        <button id="openMenu">&#9776;</button>
+
+        <nav id="menu">
+            <button id="closeMenu">X</button>
+            <a href="#">início (nav)</a>
+            <a href="#">Produtos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <main>(main)
+        <table class="Data_Correspondentes">
+            <tr>
+                <td>
+                    <a href="#">Data_Correspondentes: </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>03/Jan</td>
+            </tr>
+            <tr>
+                <td>Receita</td>
+            </tr>
+
+            <tr>
+                <td>Custo</td>
+            </tr>
+
+            <tr>
+                <td>Credito</td>
+            </tr>
+
+            <tr>
+                <td>%Custo</td>
+            </tr>
+
+            <tr>
+                <td>%Credito</td>
+            </tr>
+        </table>
+
+        <table class="Valores_Correspondentes">
+            <tr>
+                <td><a href="#">Valores: </a></td>
+            </tr>
+
+            <tr>
+                <td>R$ 1000</td>
+            </tr>
+            
+            <tr>
+                <td>R$ 1000</td>
+            </tr>
+
+            <tr>
+                <td>R$ 1000</td>
+            </tr>
+
+            <tr>
+                <td>R$ 1000</td>
+
+            </tr>
+
+            <tr>
+                <td>R$ 1000</td>
+
+            </tr>
+
+            <tr>
+                <td>R$ 1000</td>
+
+            </tr>
+        </table>
+    </main>
+
+    <aside>(aside)
+        <table class="Custos">
+            <tr>
+                <td><a href="#">Custos: </a></td>
+            </tr>
+    
+            <tr>
+                <td>CSTV</td>
+            </tr>
+            
+            <tr>
+                <td>CSTF</td>
+            </tr>
+    
+            <tr>
+                <td>JRB</td>
+            </tr>
+
+            <tr>
+                <td>SQE</td>
+            </tr>
+
+            <tr>
+                <td>IVT</td>
+            </tr>
+        </table>
+
+        <table class="Valores_Custos">
+            <tr>
+                <td><a href="#">Valores: </a></td>
+            </tr>
+    
+            <tr>
+                <td>R$ 1000</td>
+            </tr>
+            
+            <tr>
+                <td>R$ 1000</td>
+            </tr>
+    
+            <tr>
+                <td>R$ 1000</td>
+            </tr>
+
+            <tr>
+                <td>R$ 1000</td>
+            </tr>
+
+            <tr>
+                <td>R$ 1000</td>
+            </tr>
+        </table>
+
+        <table class="Receita_Final">
+            <tr>
+                <td><a href="#">Valores: </a></td>
+            </tr>
+    
+            <tr>
+                <td>R$ 1000</td>
+            </tr>
+            
+        </table>
+
+        </aside>
+    <footer>(footer)</footer>
+
+    <script type="text/javascript">
+
+        openMenu.addEventListener('click', () => {
+            menu.style.display = 'flex'
+
+            menu.style.right = (menu.offsetWidth * -1) + 'px'
+
+            openMenu.style.display = 'none'
+
+            setTimeout(()=> {
+                menu.style.opacity  ='1'
+
+                menu.style.right = '0'
+            }, 10)
+            
+        })
+
+        closeMenu.addEventListener('click', () => {
+            menu.style.opacity = '0'
+
+            menu.style.right = (menu.offsetWidth *-1) + 'px'
+
+            setTimeout(() => {
+                menu.removeAttribute('style')
+                openMenu.removeAttribute('style')
+            },200)
+            
+        })
+
+    </script>
 </body>
 </html>

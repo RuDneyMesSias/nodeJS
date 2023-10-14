@@ -5,6 +5,7 @@ const PORT = 3000;
 const HOST = '0.0.0.0';
 
 app.set('view engine','ejs');
+app.use(express.static('public'));
 
 //Rota pontando para pasta views.
 
@@ -24,7 +25,7 @@ app.get("/:nome/:lang",(req,res) => {
     ]
 
 
-    res.render("index",{
+    res.render("principal/perfil",{
         nome: nome,
         lang: lang,
         empresa: "Guia do programador",
