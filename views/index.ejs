@@ -11,10 +11,29 @@
     <hr>
     <h3>Lista de perguntas  insanas e malucas </h3>
 
+    <!--Método de exibição de dados ejs-->
+
     <p>Nome: <%= nome %></p>
     <p>lang: <%= lang %></p>
     <p>empresa: <%= empresa %></p>
     <p>inscritos: <%= inscritos %></p>
+
+    <!--EStrutura de if/else-->
+
+    <% if(msg == false){%>
+        <h3>Isso é uma msg de erro!</h3>
+    <%} else {%>
+        <h3>Nenhum tipo de erro!!</h3>
+    <%}%>
+
+    <!--Método forEach-->
+
+    <%produtos.forEach(function(produto) { %>
+        
+        <h4><%=produto.nome %></h4>
+        <h5><%=produto.preco %></h5>
+    <% }) %>
+    
 
 </body>
 </html>
