@@ -9,7 +9,14 @@ app.set('view engine','ejs');
 
 //Rota pontando para pasta views.
 app.get("/",(req, res) =>{
-    res.render("principal/perfil");
+    var nome = "Rudney Messias ";
+    var lang = "JavaScript"
+    res.render("index", {
+        nome: nome,
+        lang:lang,
+        empresa: "Guia do programador",
+        inscritos: 8000
+    });
 });
 
 
