@@ -9,30 +9,9 @@ app.use(express.static('public'));
 
 //Rota pontando para pasta views.
 
-app.get("/:nome/:lang",(req,res) => {
-    var nome = req.params.nome;
-    var lang = req.params.lang;
-    var exibirMsg = true;
+app.get("/",(req,res) => {
 
-
-    var produtos = [
-        {nome: "Doritos", preco: 3.14},
-        {nome: "Coca-cola", preco: 5},
-        {nome: "leite", preco: 3.14},
-        {nome: "Carne", preco: 15},
-        {nome: "REdBull", preco: 10},
-        {nome: "NEscal", preco: 6.50}
-    ]
-
-
-    res.render("principal/perfil",{
-        nome: nome,
-        lang: lang,
-        empresa: "Guia do programador",
-        inscritos: 5400,
-        msg: exibirMsg,
-        produtos: produtos
-    });
+    res.render("index");
 });
 
 app.listen(3000, function(erro){
