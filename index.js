@@ -10,8 +10,11 @@ app.use(express.static('public'));
 //Rota pontando para pasta views.
 
 app.get("/",(req,res) => {
-
     res.render("index");
+});
+
+app.get("/perguntar",(req,res) => {
+    res.render("perguntar");
 });
 
 app.listen(3000, function(erro){
