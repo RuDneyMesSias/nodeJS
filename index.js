@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 //Rota pontando para pasta views.
-
 app.get("/",(req,res) => {
     res.render("index");
 });
