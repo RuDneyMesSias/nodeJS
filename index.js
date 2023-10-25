@@ -1,17 +1,17 @@
 const express = require('express'); //Importando o express
 const app = express();
 const bodyParser =require("body-parser"); //Traduzir dados do formulário para JavaScript
-const connection = require("./database/database");
+const connection = require("./db/models/");
 
 //Database
 connection
     .authenticate()
-        .then(() => {
-            console.log("conexão feita com o banco de dados!")
-        })
-        .catch((msgErro) => {
-            console.log(msgErro);
-        })
+    .then(() => {
+        console.log("COnexão feita com o banco de dados!");
+    })
+    .catch((msgErro) => {
+        consolle.log(msgErro);
+    })
 
 // Estou dizendo para o Express usar o EJS como View engine
 app.set('view engine','ejs');
