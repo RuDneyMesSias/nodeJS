@@ -1,13 +1,16 @@
 'use strict';
+require('dotenv').config();
+
 
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
 const process = require('process');
 const basename = path.basename(__filename);
-const env = /*process.env.NODE_ENV ||*/ 'development';
+const env = process.env.NODE_ENV;
 const config = require(__dirname + '/../config/config.js')[env];
 const db = {};
+
 
 let sequelize;
 if (config.use_env_variable) {
@@ -15,6 +18,15 @@ if (config.use_env_variable) {
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
+
+//Verificar conexão com banco de dados 
+try{
+  console.log("Conexão com o banco de dados realizado com sucesso!");
+}catch(error){
+  console.error("Erro: Conexão com o banco de dados não realizado com sucesso!", error);
+}
+
+
 
 fs
   .readdirSync(__dirname)
@@ -41,3 +53,4 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+
