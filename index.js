@@ -4,7 +4,6 @@ const bodyParser =require("body-parser"); //Traduzir dados do formulário para J
 const database = require("./db/models/");
 //Database
 
-
 // Estou dizendo para o Express usar o EJS como View engine
 app.set('view engine','ejs');
 app.use(express.static('public'));
@@ -32,6 +31,6 @@ app.listen(3000, function(erro){
     if(erro){
         console.log("Ocorreu um erro!");
     }else{
-        console.log("Servidor iniciado com sucesso!");
+        console.log("App/index: Servidor iniciado com sucesso!");
     }
 });
